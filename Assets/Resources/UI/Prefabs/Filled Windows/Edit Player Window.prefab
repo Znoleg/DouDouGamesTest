@@ -12,15 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935867979c0dc054cab1d2bad6f15891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _closeButtons:
-  - Button: {fileID: 6430111656915601481}
-    NextOpenWindow: {fileID: 0}
+  _defaultCloseButtons:
   - Button: {fileID: 5899090846298088219}
     NextOpenWindow: {fileID: 0}
+  _playersData: {fileID: 11400000, guid: 2890397d02693284eb9218625672639e, type: 2}
   _nameInput: {fileID: 8192752696022245613}
   _scoreInput: {fileID: 2949193793346052287}
-  _playersData: {fileID: 11400000, guid: 2890397d02693284eb9218625672639e, type: 2}
+  _warningLabel: {fileID: 0}
+  _useUniqueNaming: 0
   _editButton: {fileID: 6430111656915601481}
+  _setEditText: 1
+--- !u!114 &7041937104763190016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8734700663928598967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54ddaa4514a7aa749ae60edb6600a05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Constraints:
+  - AcceptInputButton: {fileID: 6430111656915601481}
+    InputConstraints:
+    - InputField: {fileID: 8192752696022245613}
+      InputType: 0
+      MinCharacters: 1
+      MaxCharacters: 18
+    - InputField: {fileID: 2949193793346052287}
+      InputType: 1
+      MinCharacters: 1
+      MaxCharacters: 9999
 --- !u!1001 &3721451104434781419
 PrefabInstance:
   m_ObjectHideFlags: 0

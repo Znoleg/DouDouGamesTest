@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Assets.Scripts.UI
+namespace Assets.Scripts.UI.Elements
 {
     public class PlayerDataUI : MonoBehaviour, IPointerClickHandler
     {
@@ -19,22 +19,25 @@ namespace Assets.Scripts.UI
 
         [SerializeField]
         private Button _selectButton;
-        
+
         private GameObject _containter;
         private EditWindow _editWindow;
+        private PlayerData _ownData;
         private int _index;
 
         public TextMeshProUGUI NumberText => _numberText;
         public Button SelectButton => _selectButton;
-        public PlayerData OwnData { get; private set; }
+        public PlayerData OwnData => _ownData;
         public int Index => _index;
 
-        public void Initialize(PlayerData ownData, GameObject container, EditWindow editWindow)
+        public void Construct(GameObject container, EditWindow editWindow)
         {
-            OwnData = ownData;
             _containter = container;
             _editWindow = editWindow;
         }
+
+        public void SetOwnData(PlayerData ownData) =>
+            _ownData = ownData;
 
         public void SetNumber(int number)
         {

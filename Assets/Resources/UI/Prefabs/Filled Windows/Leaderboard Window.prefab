@@ -8,7 +8,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7407252016881775591}
   m_CullTransparentMesh: 0
---- !u!114 &1521463168
+--- !u!114 &3844185441948776157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f0658af927a974e90e5b92116dafa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _closeButtons:
+  _defaultCloseButtons:
   - Button: {fileID: 3164895907429279779}
     NextOpenWindow: {fileID: 0}
   _playersData: {fileID: 11400000, guid: 2890397d02693284eb9218625672639e, type: 2}

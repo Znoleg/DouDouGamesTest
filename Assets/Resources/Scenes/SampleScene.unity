@@ -146,6 +146,22 @@ PrefabInstance:
       propertyPath: _closeButtons.Array.data[0].NextOpenWindow
       value: 
       objectReference: {fileID: 281122180}
+    - target: {fileID: 3844185441948776157, guid: 21f4bb65d3e838d4bb132085a05f13f8, type: 3}
+      propertyPath: _editWindow
+      value: 
+      objectReference: {fileID: 1187168387}
+    - target: {fileID: 3844185441948776157, guid: 21f4bb65d3e838d4bb132085a05f13f8, type: 3}
+      propertyPath: _defaultCloseButtons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844185441948776157, guid: 21f4bb65d3e838d4bb132085a05f13f8, type: 3}
+      propertyPath: _closeButtons.Array.data[0].NextOpenWindow
+      value: 
+      objectReference: {fileID: 281122180}
+    - target: {fileID: 3844185441948776157, guid: 21f4bb65d3e838d4bb132085a05f13f8, type: 3}
+      propertyPath: _defaultCloseButtons.Array.data[0].NextOpenWindow
+      value: 
+      objectReference: {fileID: 281122180}
     - target: {fileID: 6217159806850890005, guid: 21f4bb65d3e838d4bb132085a05f13f8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -245,6 +261,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6217159806850890005, guid: 21f4bb65d3e838d4bb132085a05f13f8, type: 3}
   m_PrefabInstance: {fileID: 229737635}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &229737637 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3844185441948776157, guid: 21f4bb65d3e838d4bb132085a05f13f8, type: 3}
+  m_PrefabInstance: {fileID: 229737635}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f0658af927a974e90e5b92116dafa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &281122180 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6351079127558140109, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
@@ -330,13 +357,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 1493305872}
     m_Modifications:
     - target: {fileID: 1549606141065242478, guid: eae2845090206ff4ab12e79256445c6c, type: 3}
+      propertyPath: _uniqueNaming
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549606141065242478, guid: eae2845090206ff4ab12e79256445c6c, type: 3}
+      propertyPath: _warningLabel
+      value: 
+      objectReference: {fileID: 413012350}
+    - target: {fileID: 1549606141065242478, guid: eae2845090206ff4ab12e79256445c6c, type: 3}
+      propertyPath: _useUniqueNaming
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549606141065242478, guid: eae2845090206ff4ab12e79256445c6c, type: 3}
+      propertyPath: _leaderBoardWindow
+      value: 
+      objectReference: {fileID: 229737637}
+    - target: {fileID: 1549606141065242478, guid: eae2845090206ff4ab12e79256445c6c, type: 3}
       propertyPath: _closeButtons.Array.data[0].NextOpenWindow
       value: 
-      objectReference: {fileID: 1521463168}
+      objectReference: {fileID: 229737637}
     - target: {fileID: 1549606141065242478, guid: eae2845090206ff4ab12e79256445c6c, type: 3}
       propertyPath: _closeButtons.Array.data[1].NextOpenWindow
       value: 
-      objectReference: {fileID: 1521463168}
+      objectReference: {fileID: 229737637}
+    - target: {fileID: 1549606141065242478, guid: eae2845090206ff4ab12e79256445c6c, type: 3}
+      propertyPath: _defaultCloseButtons.Array.data[0].NextOpenWindow
+      value: 
+      objectReference: {fileID: 229737637}
     - target: {fileID: 5313106718198299461, guid: eae2845090206ff4ab12e79256445c6c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -478,6 +525,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &413012350 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5550984505906028145, guid: eae2845090206ff4ab12e79256445c6c, type: 3}
+  m_PrefabInstance: {fileID: 413012346}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &519333409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -488,11 +546,11 @@ PrefabInstance:
     - target: {fileID: 478079021308319824, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
       propertyPath: _closeButtons.Array.data[0].NextOpenWindow
       value: 
-      objectReference: {fileID: 1521463168}
+      objectReference: {fileID: 0}
     - target: {fileID: 478079021308319824, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
       propertyPath: _closeButtons.Array.data[1].NextOpenWindow
       value: 
-      objectReference: {fileID: 1521463168}
+      objectReference: {fileID: 0}
     - target: {fileID: 768053924658550057, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
       propertyPath: m_Name
       value: Add Player Window
@@ -602,8 +660,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2890397d02693284eb9218625672639e, type: 2}
     - target: {fileID: 6351079127558140109, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
+      propertyPath: _uniqueNaming
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351079127558140109, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
+      propertyPath: _warningLabel
+      value: 
+      objectReference: {fileID: 519333413}
+    - target: {fileID: 6351079127558140109, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
+      propertyPath: _useUniqueNaming
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351079127558140109, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
+      propertyPath: _leaderBoardWindow
+      value: 
+      objectReference: {fileID: 229737637}
+    - target: {fileID: 6351079127558140109, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
       propertyPath: _closeButtons.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6351079127558140109, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
       propertyPath: _closeButtons.Array.data[1].Button
@@ -612,11 +686,15 @@ PrefabInstance:
     - target: {fileID: 6351079127558140109, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
       propertyPath: _closeButtons.Array.data[0].NextOpenWindow
       value: 
-      objectReference: {fileID: 1521463168}
+      objectReference: {fileID: 229737637}
     - target: {fileID: 6351079127558140109, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
       propertyPath: _closeButtons.Array.data[1].NextOpenWindow
       value: 
-      objectReference: {fileID: 1521463168}
+      objectReference: {fileID: 229737637}
+    - target: {fileID: 6351079127558140109, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
+      propertyPath: _defaultCloseButtons.Array.data[0].NextOpenWindow
+      value: 
+      objectReference: {fileID: 229737637}
     m_RemovedComponents:
     - {fileID: 6846374074381920948, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
@@ -645,6 +723,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &519333413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7311321387942791733, guid: 385aad999de9b8944af07520b10a5c14, type: 3}
+  m_PrefabInstance: {fileID: 519333409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &519420028
@@ -854,14 +943,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1521463168 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1521463168, guid: 21f4bb65d3e838d4bb132085a05f13f8, type: 3}
-  m_PrefabInstance: {fileID: 229737635}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f0658af927a974e90e5b92116dafa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

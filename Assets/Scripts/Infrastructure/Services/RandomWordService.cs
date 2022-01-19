@@ -5,10 +5,10 @@ namespace Assets.Scripts.Infrastructure.Services
 {
     public class RandomWordService
     {
-        private readonly RandomService _random;
+        private readonly IRandomService _random;
         private readonly List<char> _defaultCharset;
 
-        public RandomWordService(RandomService randomService)
+        public RandomWordService(IRandomService randomService)
         {
             _random = randomService;
             _defaultCharset = new List<char>();

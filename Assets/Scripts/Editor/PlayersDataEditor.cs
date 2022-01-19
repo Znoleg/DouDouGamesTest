@@ -1,7 +1,6 @@
 ﻿using Assets.Scripts.Data;
 using Assets.Scripts.Infrastructure.Services;
-using Assets.Scripts.UI;
-using System;
+using Assets.Scripts.UI.Elements;
 using UnityEditor;
 using UnityEngine;
 
@@ -83,7 +82,8 @@ namespace Assets.Scripts.Editor
             {
                 if (GUILayout.Button("Clear"))
                 {
-                    playersData.PlayerDatas.Clear();
+                    while (playersData.PlayerDatas.Count != 0)
+                        playersData.RemoveAt(0);
                 }
             }
 

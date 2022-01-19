@@ -1,10 +1,11 @@
 ﻿using Assets.Scripts.Data;
+using Assets.Scripts.UI.Elements.Base;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts.UI
+namespace Assets.Scripts.UI.Elements
 {
     public class LeaderboardWindow : WindowBase
     {
@@ -49,7 +50,7 @@ namespace Assets.Scripts.UI
         {
             bool dataIsSelected = _selectedData != null;
             if (!dataIsSelected) return;
-            
+
             _playersData.RemoveAt(_selectedData.Index);
 
             _createdData.Remove(_selectedData);
@@ -65,22 +66,20 @@ namespace Assets.Scripts.UI
 
             bool dataIsLast = index == _playersData.PlayerDatas.Count;
             if (!dataIsLast)
-                ReorderAddedUI(uiInstance, index);
+                ReorderUIData(uiInstance, index);
         }
 
         private void EditData(int oldIndex, PlayerData newData, int newIndex)
         {
             PlayerDataUI uiData = _createdData[oldIndex];
 
-            Debug.Log($"OldData: {uiData.OwnData}, NewData: {newData}");
             InitializeUIData(newData, uiData, newIndex + 1);
 
-            ReorderAddedUI(uiData, newIndex);
+            ReorderUIData(uiData, newIndex);
         }
 
-        private void ReorderAddedUI(PlayerDataUI lastCreated, int index)
+        private void ReorderUIData(PlayerDataUI lastCreated, int index)
         {
-            Debug.Log($"Add data: {lastCreated.OwnData}");
             InitPerfomanceDictionary();
             ReorderDataList();
             SetTransfromIndex(lastCreated, index);
@@ -97,16 +96,9 @@ namespace Assets.Scripts.UI
 
             void ReorderDataList()
             {
-                try
-                {
-                    _createdData = _createdData
-                                    .OrderBy((PlayerDataUI dataUi) => _playerDataIndex[dataUi.OwnData])
-                                    .ToList();
-                }
-                catch (KeyNotFoundException exception)
-                {
-                    Debug.LogError($"Not found: ");
-                }
+                _createdData = _createdData
+                                .OrderBy((dataUi) => _playerDataIndex[dataUi.OwnData])
+                                .ToList();
             }
 
             static void SetTransfromIndex(PlayerDataUI lastCreated, int index)
@@ -135,16 +127,18 @@ namespace Assets.Scripts.UI
         private PlayerDataUI CreateUIData(PlayerData playerData, int number)
         {
             PlayerDataUI dataUIInstance = Instantiate(_playerDataUIPrefab, _playerListHolder);
+
             dataUIInstance.SelectButton.onClick.AddListener(() => SetSelectedData(dataUIInstance));
-            
+            dataUIInstance.Construct(container: gameObject, _editWindow);
             InitializeUIData(playerData, dataUIInstance, number);
             _createdData.Add(dataUIInstance);
+
             return dataUIInstance;
         }
 
         private void InitializeUIData(PlayerData playerData, PlayerDataUI uiInstance, int number)
         {
-            uiInstance.Initialize(playerData, gameObject, _editWindow);
+            uiInstance.SetOwnData(playerData);
             uiInstance.SetScore(playerData.Score);
             uiInstance.SetNickname(playerData.Nickname);
             uiInstance.SetNumber(number);
